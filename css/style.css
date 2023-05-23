@@ -1,0 +1,450 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: "Inter", "Arial", sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+button,
+a {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: opacity 0.3s ease-out;
+    background-color: transparent;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+    opacity: 0.8;
+}
+
+/*
+=============== 
+Fonts
+===============
+*/
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Oswald";
+
+    font-display: swap;
+    src: url("../fonts/oswald-regular.woff2") format("woff2"),
+    url("../fonts/oswald-regular.woff") format("woff");
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Inter";
+
+    font-display: swap;
+    src: url("../fonts/inter-regular.woff2") format("woff2"),
+    url("../fonts/inter-regular.woff") format("woff");
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Open Sans";
+
+    font-display: swap;
+    src: url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+}
+
+.header {
+    background-image: url("../../img/header-bg-img.png"), url("../../img/header-bg.jpeg");
+    background-position: top right, left center;
+    background-repeat: no-repeat, repeat-x;
+}
+
+.header__content {
+    padding-top: 43px;
+    padding-bottom: 52px;
+    color: #fff;
+    display: flex;
+}
+
+/*
+=============== 
+logo
+===============
+*/
+
+.logo {
+    width: 387px;
+    display: flex;
+}
+
+.logo img {
+    margin-right: 20px;
+}
+
+.logo__name--top {
+    font-size: 41px;
+    line-height: 59.45px;
+    font-family: "Oswald", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+.logo__name--bottom {
+    font-size: 15px;
+    line-height: 21.75px;
+    font-family: "Inter", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+/*
+=============== 
+contacts
+===============
+*/
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts button {
+    font-family: "Inter", "Arial", sans-serif;
+    background-color: #fff;
+    color: #212121;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 19.36px;
+    min-width: 204px;
+    padding: 20px 0;
+    align-self: center;
+    margin-right: 16px;
+}
+
+.contacts__whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__whatsapp-icon {
+    width: 33px;
+    height: 33px;
+    background-color: #000;
+    border-radius: 100px;
+    align-self: center;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contacts__whatsapp-icon svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts__whatsapp-span {
+    display: none;
+    font-size: 14px;
+    line-height: 16.94px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contacts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 314px;
+    text-align: right;
+    justify-content: flex-end;
+    margin-right: 32px;
+}
+
+.contacts__tel {
+    font-family: "Oswald", "Arial", sans-serif;
+    color: #fff;
+    font-size: 29px;
+    line-height: 42.05px;
+    text-decoration: none;
+}
+
+.contacts__address {
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 21.75px;
+}
+
+/*
+=============== 
+navigation
+===============
+*/
+
+.navigation {
+    color: #fff;
+    background: linear-gradient(180deg, #003471 0%, #212121 191.67%);
+    min-height: 48px;
+    padding: 16px 0;
+}
+
+.navigation__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.navigation__list a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.navigation__contacts {
+    display: none;
+}
+
+/*
+=============== 
+mobile-menu
+===============
+*/
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        background-image: url("../../img/header-bg-img-mob.png"), url("../../img/header-bg-mob.png");
+        background-position: bottom 0 center, top center;
+        background-size: 100%, 170%;
+        min-height: 525px;
+        z-index: 100;
+    }
+
+    .header__content {
+        padding: 0;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .logo__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 51px;
+        height: 59px;
+        margin-right: 14px;
+    }
+
+    .logo__name--top {
+        font-size: 28px;
+        line-height: 40.6px;
+    }
+    .logo__name--bottom {
+        font-size: 13px;
+        line-height: 18.85px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contacts__wrapper {
+        width: 100%;
+        width: 200px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .contacts__tel {
+        font-size: 23px;
+        line-height: 33.35px;
+        margin-bottom: 10px;
+    }
+
+    .contacts__whatsapp {
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .contacts__whatsapp-icon {
+        margin-right: 10px;
+    }
+
+    .contacts__whatsapp-span {
+        display: block;
+    }
+
+    .contacts button {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .contacts__address {
+        font-size: 11px;
+        line-height: 15.95px;
+        margin-bottom: 20px;
+    }
+    
+    .navigation {
+        background: none;
+        background-color: #F6F5F5;
+        padding-top: 67px;
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation__list a {
+        font-size: 17px;
+        line-height: 20.57px;
+        color: #000;
+    }
+
+    .navigation__list li {
+        margin-bottom: 10px;
+    }
+
+    .navigation__contacts {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        align-items: center;
+    }
+
+    .navigation__contacts button {
+        background-color: #FFB800;
+        box-shadow: 0px 20px 40px -18px rgba(0, 0, 0, 0.6);
+        border-radius: 3px;
+        font-size: 16px;
+        line-height: 19.36px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .navigation__address {
+        line-height: 24px;
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .navigation__whatsapp {
+        display: flex;
+        align-items: center;
+        color: #000;
+        font-size: 17px;
+        line-height: 20.57px;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+    .navigation__whatsapp svg {
+        margin-right: 20px;
+    }
+
+    .mobile-menu {
+        padding: 10px 8px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff;
+        margin-bottom: 35px;
+    }
+
+    .mobile-menu__user-cart {
+        position: relative;
+    }
+
+    .mobile-menu__cart-amount {
+        color: #fff;
+        color: #000;
+        background-color: #FFB800;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        padding: 2px 4px 0px 4px;
+        right: -5px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .mobile-menu__burger,
+    .mobile-menu__btn-cart,
+    .mobile-menu__user-wishlist {
+        margin-left: 10px;
+        padding: 0;
+    }
+
+    .mobile-menu__icon-close {
+        display: none;
+    }
+
+    .mobile-menu__burger.hide .mobile-menu__icon-burger {
+        display: none;
+    }
+    .mobile-menu__burger.hide .mobile-menu__icon-close {
+        display: block;
+    }
+}
